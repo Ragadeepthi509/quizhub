@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-        }
-        .login-box {
-            background: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            width: 300px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #45a049;
-        }
-        .forgot {
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
-    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>QuizHub - Welcome</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #3498db, #8e44ad);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    .start-btn {
+        background: #27ae60;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .start-btn:hover {
+        background: #219150;
+        transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
 </head>
 <body>
-    <center>
-        <div class="login-box">
-        <h1>Login</h1>
-    <form action="./quiz.html">
-        <p>
-            <input type="email" placeholder="Enter email" required />
-        </p>
-        <p>
-            <input type="password" placeholder="Enter password" required />
-        </p>
-        <p>
-            <a href="#">Forgot password?</a>
-        </p>
-        <p>
-            <button type="submit">Submit</button>
-        </p>
-    </form>
-         </div>
-    </center>
+
+<div class="container">
+    <h1>QuizHub</h1>
+    <p>Test your knowledge. Challenge yourself. Have fun!</p>
+    <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<script>
+function startQuiz() {
+    // Redirect to quiz page
+    window.location.href = "index.html"; 
+}
+</script>
+
 </body>
-</html>                           
+</html>
